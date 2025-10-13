@@ -1,0 +1,29 @@
+html
+body{
+    /* display: flex;
+    justify-content: space-between; */
+    /*justify-content: space-between;*/
+    /* align-items: center; */
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction:column; 
+    /* flex-direction 을 세로 방향으로 변경을 한거임 -> 교차축이든 주축이든 바꿀 수 있다 -> flex-direction 을 통해서 */
+    /* justify-content: center; */
+    justify-content: flex-end;
+    /* justify-content: start; */
+
+}
+
+/*공간에 요소를 맞추어 배치한다.*/
+div {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+}
+
+#second{
+    background-color: seagreen;
+}

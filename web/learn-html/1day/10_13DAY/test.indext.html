@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식 테스트</title>
+    <style>
+
+        form {
+            width: 250px;
+            padding: 0;
+            border: none;
+        }
+        fieldset {
+            border: 1px solid #ccc; 
+            padding: 20px 580px; 
+            margin: 0;
+        }
+        
+        legend {
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 0 10px; 
+            margin-left: 10px;
+            width: auto; 
+            border: none; 
+        }
+        
+
+
+        .form-group {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center; 
+        }
+
+        .form-group label {
+            width: 80px;
+            margin-right: 10px;
+            text-align: right;
+            font-weight: normal;
+        }
+        
+        .form-group input:not([type="radio"]):not([type="checkbox"]):not([type="color"]):not([type="range"]) {
+            flex-grow: 1; 
+            padding: 3px;
+            border: 1px solid #ccc;
+            width: 150px;
+            flex-grow: 0;
+        }
+        
+        input[type="number"] {
+            width: 40px; 
+            text-align: center;
+        }
+        input[type="range"] {
+            flex-grow: 1;
+        }
+        
+        .control-group {
+            margin-left: 90px; 
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .button-group {
+            margin-left: 90px;
+            margin-top: 10px;
+        }
+        .button-group button {
+            display: block; 
+            width: 80px;
+            padding: 5px 0;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            background-color: #f0f0f0;
+        }
+        .button-group button:last-child {
+            background-color: #007bff;
+            color: #fff;
+            margin-top: 5px;
+        }
+        
+        .file-select-group {
+            margin-left: 90px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .file-select-group label {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            width: auto;
+            margin-right: 0;
+            font-weight: normal;
+        }
+        .file-select-group input[type="file"] {
+            display: none;
+        }
+        .file-select-group span {
+            padding-left: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>입력양식 속성</legend>
+            
+            <div class="form-group">
+                <label for="id">아이디 :</label>
+                <input type="text" id="id" name="id">
+            </div>
+
+            <div class="form-group">
+                <label for="password">비밀번호 :</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label for="search">검색 :</label>
+                <input type="text" id="search" name="search">
+            </div>
+
+            <div class="form-group">
+                <label for="email">이메일 :</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="tel">전화번호 :</label>
+                <input type="tel" id="tel" name="tel">
+            </div>
+
+            <div class="form-group">
+                <label for="color">컬러선택 :</label>
+                <input type="color" id="color" name="color" value="#000000"> 
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">수량 :</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1">
+            </div>
+
+            <!-- 만족도 : -->
+            <div class="form-group">
+                <label for="satisfaction">만족도 :</label>
+                <input type="range" id="satisfaction" name="satisfaction" min="0" max="100" value="70">
+            </div>
+
+            <!-- 예 아니요 -->
+            <div class="control-group">
+                <input type="radio" id="yes" name="answer" value="yes" checked>
+                <label for="yes">예</label>
+                <input type="radio" id="no" name="answer" value="no">
+                <label for="no">아니오</label>
+            </div>
+
+
+
+            <div class="control-group">
+                <input type="checkbox" id="html" name="language" value="html" checked>
+                <label for="html">html</label>
+                <input type="checkbox" id="css" name="language" value="css">
+                <label for="css">css</label>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">전송</button>
+                <button type="reset">취소</button>
+                <button type="button">확인</button>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">검색</button>
+            </div>
+            
+            <div class="file-select-group">
+                <label for="file-upload">파일 선택</label>
+                <input type="file" id="file-upload" name="file-upload">
+                <span>선택된 파일 없음</span>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

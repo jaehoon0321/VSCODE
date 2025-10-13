@@ -1,0 +1,15 @@
+#container {
+    /* #container 선택자: id가 'container'인 요소에 적용 */
+			width:350px;
+            /* 너비 가로크기를 350픽셀 */
+			margin:30px auto;
+            /* 상하여백 30px , 좌우여백 auto 로 설정하여  블록 요소를 가운데 정렬 */
+		}
+    img {
+      border:1px solid white;
+      /* 굵기 1픽셀, 실선 (solid) , 색상 흰색 */
+      border-radius:50%;
+      /* 테두리를 모서리를 둥글게       */
+      box-shadow: 5px 5px 30px 2px black;
+      /* 그림자 효과 수평 5PX, 수직 5PX , 흐림정도 30PX , 2PX그림자크기 /확산정도  BLACK 그림자 색상. */
+    }
